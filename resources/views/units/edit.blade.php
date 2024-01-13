@@ -11,8 +11,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <a href="{{ route('categories.index') }}">
-                                <button class="btn btn-primary">Category</button>
+                            <a href="{{ route('units.index') }}">
+                                <button class="btn btn-primary">Units</button>
                             </a> 
                         </ol>
                     </div>
@@ -28,7 +28,7 @@
                         <!-- general form elements -->
                         <div class="card card-primary">
                             <div class="card-header">
-                                <h3 class="card-title">Edit Category</h3>
+                                <h3 class="card-title">Edit Unit</h3>
                             </div>
                             @if(session('success'))
                             <div class="alert alert-success">
@@ -37,14 +37,14 @@
                         @endif
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="{{ route('categories.update', ['id' => $category->id]) }}" method="POST">
+                            <form action="{{ route('units.update', ['id' => $unit->id]) }}" method="POST">
                                 @csrf
                                 @method('PUT') {{-- Use the appropriate HTTP method for updating --}}
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="category_name">Category Name</label>
-                                        <input type="text" name="category_name" class="form-control" id="category_name"
-                                            placeholder="Enter Category Name" value="{{ $category->category_name }}">
+                                        <label for="unit_name">Unit Type</label>
+                                        <input type="text" name="unit_name" class="form-control" id="brand_name"
+                                            placeholder="Enter Unit Type" value="{{ $unit->unit_name }}">
                                     </div>
                                 </div>
                                 <!-- /.card-body -->
